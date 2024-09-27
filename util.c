@@ -17,4 +17,10 @@ int listen_on_socket(int sockfd, int backlog)
         return listen(sockfd, backlog);
 }
 
-int accept_request(int so
+int accept_request(int sockfd, struct sockaddr *addr,
+                socklen_t addrlen)
+{
+        return accept(sockfd, addr, addrlen);
+}
+
+
